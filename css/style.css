@@ -43,6 +43,9 @@ body {
     margin-bottom: 20px;
     outline-color: #0b2747;
 }
+.aside-header{
+    background: #0b2747 !important;
+}
 .navbar-toggle:hover, .navbar-toggle:focus{
     background-color: #0b2747 !important;
 }
@@ -112,6 +115,37 @@ body {
     border-width: 0px;
 }
 
+.modal-backdrop.am-fade {
+  opacity: .5;
+  transition: opacity .15s linear;
+  &.ng-enter {
+    opacity: 0;
+    &.ng-enter-active {
+      opacity: .5;
+    }
+  }
+  &.ng-leave {
+    opacity: .5;
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+
+.chat-user:hover{
+    background-color: #eee;
+}
+
+.aside-body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.chat-box{
+	position:fixed;
+/*	width:50px;*/
+	top:90%;
+	right:0%;
+}
 
 @media(min-width:720px){
 

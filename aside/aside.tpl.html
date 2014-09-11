@@ -1,0 +1,35 @@
+<div class="aside" tabindex="-1" role="dialog">
+    <div class="aside-dialog">
+        <div class="aside-content">
+            <div class="aside-header" ng-show="title">
+                <button type="button" class="close" ng-click="$hide()">&times;</button>
+                <h4 class="aside-title" ng-bind-html="title"></h4>
+            </div>
+            <div class="aside-body" ng-show="content">
+
+
+                <p ng-bind-html="content"></p>
+                
+                <div class="chat-user" style="padding-left:10px; padding-right:10px;">
+                <hr>
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="images/me.jpg" alt="..." style="max-width:100px;">
+                    </div>
+                    <div class="pull-right">
+                        <h4 style="color:#000">Mitch Herrema <span class="glyphicon glyphicon-ok-circle green"></span><span class="green" style="font-family: 'Open Sans', sans-serif;"> Online</span></h4>
+                        <h5 style="color:#000">Working on Todo: Create Frontend</h5>
+                        <h5 class="green pull-right" style="font-family: 'Open Sans', sans-serif;"><span class="glyphicon glyphicon-time"></span> 15:05</h5>
+                    </div>
+                </div>
+                <hr>
+                    </div>
+
+            </div>
+            <div class="aside-footer">
+                <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="$hide()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
