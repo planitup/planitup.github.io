@@ -6,3 +6,9 @@ planitup.controller("MainCtrl", function ($scope) {
         "content": ' '
     };
 });
+
+planitup.controller("loginController", function ($scope, $window) {
+    $scope.loginComplete = function(){
+        $window.location.href = "index.html";
+    };
+});

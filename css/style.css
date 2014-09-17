@@ -10,6 +10,9 @@ h6{
         font-family: 'aguda_boldregular';
 
 }
+h3{
+    margin-top: 10px;
+}
 body {
     padding-top: 90px;
     background-color: #0b2747;
@@ -114,6 +117,9 @@ body {
     background-color:  #ee543b;
     border-width: 0px;
 }
+.btn-primary[disabled]{
+    background-color:  #017e5e;
+}
 
 .modal-backdrop.am-fade {
   opacity: .5;
@@ -145,6 +151,20 @@ body {
 /*	width:50px;*/
 	top:92%;
 	right:0%;
+}
+
+.todo:hover{
+    background-color: #ee543b !important;
+}
+.todo:hover > h3, .todo:hover small {
+    color: #fff !important;
+}
+
+.ng-invalid.ng-dirty {
+    border-color: #F07070;
+}
+.ng-valid.ng-dirty {
+    border-color: #0b2747;
 }
 
 @media(min-width:720px){
