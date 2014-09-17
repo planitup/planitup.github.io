@@ -110,6 +110,12 @@ body {
 .green {
     color: #017e5e;
 }
+.blue {
+    color: #0b2747;
+}
+.btn{
+    border-radius: 0px;
+}
 .btn-primary{
     background-color: #017e5e;
     border-width: 0px;
