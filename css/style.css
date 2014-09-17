@@ -16,6 +16,7 @@ h3{
 body {
     padding-top: 90px;
     background-color: #0b2747;
+    background: url(http://planitup.github.io/images/bg.jpg) repeat center center fixed;
     font-family: 'Open Sans', sans-serif;
 }
 .navbar-nav >li >a{
