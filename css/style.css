@@ -15,6 +15,7 @@ h3{
 }
 body {
     padding-top: 100px;
+    padding-bottom: 50px;
     background-color: #0b2747;
     background: url(http://planitup.github.io/images/bg.jpg) repeat center center fixed;
     font-family: 'Open Sans', sans-serif;
@@ -97,15 +98,14 @@ body {
     background-color: #017e5e;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 5px;
 }
 .project-details {
     background-color: #ffffff;
-    padding-left: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 15px;
 }
 .green {
     color: #017e5e;
@@ -154,11 +154,36 @@ body {
 	right:0%;
 }
 
-.todo:hover{
-    background-color: #ee543b !important;
+.todo{
+    overflow: hidden;
 }
-.todo:hover > h3, .todo:hover small {
-    color: #fff !important;
+.todo .impact{
+    background-color: #017e5e;
+    color: #fff;
+    padding-bottom: 500em;
+    margin-bottom: -500em;
+}
+.todo .impact .glyphicon{
+    font-size: 20px;
+}
+.todo .todo-details{
+    background-color: #fff;
+    color: #0b2747;
+}
+.todo > a:hover > .impact {
+    background-color: #ee543b;
+}
+.todo .todo-details h3, .todo todo-details h3>small {
+    color: #0b2747;
+}
+.todo a {
+    text-decoration: none;
+}
+.well{
+    border-radius: 0px;
+}
+.text-link:hover{
+    color: #0b2747;
 }
 
 .ng-invalid.ng-dirty {
