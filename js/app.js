@@ -1,10 +1,11 @@
-var planitup = angular.module('planitup', ['mgcrea.ngStrap', 'ngAnimate', 'ngSanitize']);
+var planitup = angular.module('planitup', ['ui.bootstrap', 'mgcrea.ngStrap', 'ngAnimate', 'ngSanitize']);
 
 planitup.controller("MainCtrl", function ($scope) {
-    $scope.aside = {
+    $scope.chatAside = {
         "title": "Chat",
         "content": ' '
     };
+    $scope.isCollapsed = true;
 });
 
 planitup.controller("loginController", function ($scope, $window) {

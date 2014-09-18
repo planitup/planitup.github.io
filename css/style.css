@@ -121,7 +121,15 @@ body {
     border-width: 0px;
 }
 .btn-primary:hover{
-    background-color:  #ee543b;
+    background-color:  #ee543b !important;
+    border-width: 0px;
+}
+.btn-primary:active{
+    background-color:  #017e5e;
+    border-width: 0px;
+}
+.btn-primary:focus{
+    background-color:  #017e5e;
     border-width: 0px;
 }
 .btn-primary[disabled]{
@@ -161,23 +169,18 @@ body {
 }
 
 .todo{
-    overflow: hidden;
+    padding-bottom: 10px;
 }
-.todo .impact{
-    background-color: #017e5e;
-    color: #fff;
-    padding-bottom: 500em;
-    margin-bottom: -500em;
-}
-.todo .impact .glyphicon{
+
+.impact .glyphicon{
     font-size: 20px;
 }
 .todo .todo-details{
     background-color: #fff;
     color: #0b2747;
 }
-.todo > a:hover > .impact {
-    background-color: #ee543b;
+a:hover > .row-md-height > .impact {
+    background-color: #ee543b !important;
 }
 .todo .todo-details h3, .todo todo-details h3>small {
     color: #0b2747;
@@ -198,6 +201,77 @@ body {
 .ng-valid.ng-dirty {
     border-color: #0b2747;
 }
+.collapse.am-collapse {
+  animation-duration: .3s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+  &.in-remove {
+    animation-name: collapse;
+    display: block;
+  }
+  &.in-add {
+    animation-name: expand;
+  }
+}
+
+/*Same Height Columns*/
+/* columns of same height styles */
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+@media (min-width: 768px) {
+    .container-sm-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-sm-height {
+        display:table-row;
+    }
+    .col-sm-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 992px) {
+    .container-md-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-md-height {
+        display:table-row;
+    }
+    .col-md-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 1200px) {
+    .container-lg-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-lg-height {
+        display:table-row;
+    }
+    .col-lg-height {
+        display:table-cell;
+        float:none;
+    }
+}
+
 
 @media(min-width:720px){
 
