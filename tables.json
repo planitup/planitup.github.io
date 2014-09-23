@@ -1,0 +1,58 @@
+{
+    Member: {
+        id: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        projects: [   
+        ],
+        availability: []
+    },
+    
+    Project: {
+        project_id: "",
+        name: "",
+        description: "",
+        due_date: ""
+    },
+    
+    Task: {
+        task_id: "",
+        name: "",
+        description: "",
+        project_id: "",
+        due_date: "",
+        rating: "",
+        member_id: [   
+        ],
+        status: ""
+    },
+    
+    Message: {
+        message_id: "",
+        sending_member: "",
+        receiving_member: [],
+        date_time: "",
+        content: ""
+    },
+    
+    Discussion: {
+        discussion_id: "",
+        project_id: "",
+        subject: "",
+        task_id: "",
+        content: [
+            {
+                member_id: "",
+                content: "",
+                date_time: ""
+            }
+        ],
+        last_modified: ""
+    }
+    
+}
+    
+    
+    
