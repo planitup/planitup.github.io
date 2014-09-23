@@ -23,22 +23,22 @@ body {
 .navbar-nav >li >a{
     font-family: 'aguda_boldregular', sans-serif;
     font-size: 20px;
-/*    color: #333 !important;*/
+    color: #0b2747 !important;
 }
-.navbar-nav li:hover {
-    background-color: #ee543b;
+.navbar-nav >li>a:hover, .nav>li>a:focus, .nav>li>a:active, .nav>li>a:visited {
+    background-color: #ee543b !important;
     color: #fff !important;
 }
-.navbar-nav li:hover a{
+/*.navbar-nav li:hover a{
     color: #fff !important;
-}
-.navbar-brand,
+}*/
+/*.navbar-brand,
 .navbar-nav li a {
     line-height: 80px;
     height: 80px;
     padding-top: 0;
     color: #333 !important;
-}
+}*/
 .navbar-header {
     border-width: 0px;
 }
@@ -54,10 +54,10 @@ body {
 .navbar-toggle:hover, .navbar-toggle:focus{
     background-color: #0b2747 !important;
 }
-.navbar-inverse {
+.navbar {
     background-color: #ffffff;
 }
-.navbar-inverse .navbar-collapse{
+.navbar .navbar-collapse{
     border-width: 0px !important;
 }
 .navbar-nav{
@@ -73,9 +73,9 @@ body {
 .navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar {
     background-color: #ffffff !important;
 }
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
     color: #fff !important;
     background-color: #017e5e;
 }
