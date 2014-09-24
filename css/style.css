@@ -20,14 +20,23 @@ body {
     background: url(http://planitup.github.io/images/bg.jpg) repeat center center fixed;
     font-family: 'Open Sans', sans-serif;
 }
+.navbar {
+    background-color: #ffffff;
+}
 .navbar-nav >li >a{
     font-family: 'aguda_boldregular', sans-serif;
     font-size: 20px;
     color: #0b2747 !important;
 }
-.navbar-nav >li>a:hover, .nav>li>a:focus, .nav>li>a:active, .nav>li>a:visited {
+.navbar-nav >li>a:hover, .nav>li>a:focus, .nav>li>a:active {
     background-color: #ee543b !important;
     color: #fff !important;
+}
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+    color: #fff !important;
+    background-color: #017e5e;
 }
 /*.navbar-nav li:hover a{
     color: #fff !important;
@@ -42,58 +51,37 @@ body {
 .navbar-header {
     border-width: 0px;
 }
+.navbar .navbar-collapse{
+    border-width: 0px !important;
+}
+.navbar{
+    border:0px;
+}
 .navbar-toggle {
     margin-top: 20px;
     margin-right: 15px;
     margin-bottom: 20px;
     outline-color: #0b2747;
 }
-.aside-header{
-    background: #0b2747 !important;
-}
 .navbar-toggle:hover, .navbar-toggle:focus{
     background-color: #0b2747 !important;
 }
-.navbar {
-    background-color: #ffffff;
+.aside-header{
+    background: #0b2747 !important;
 }
-.navbar .navbar-collapse{
-    border-width: 0px !important;
-}
-.navbar-nav{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.navbar{
-    border:0px;
-}
+
+
 .icon-bar {
     background-color: #0b2747 !important;
 }
 .navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar {
     background-color: #ffffff !important;
 }
-.navbar .navbar-nav > .active > a,
-.navbar .navbar-nav > .active > a:hover,
-.navbar .navbar-nav > .active > a:focus {
-    color: #fff !important;
-    background-color: #017e5e;
-}
+
 .row-fluid {
     background-color: #ffffff;
 }
-.project {
-    background-color: #ee543b;
-}
-.project > a:hover > .project-header {
-    background-color: #ee543b;
-}
-.project > a > .project-details {
-    color: #0b2747;
-}
-.project a {
-    text-decoration: none;
-}
+
 .project-header {
     background-color: #017e5e;
     margin-top: 0px;
@@ -107,6 +95,17 @@ body {
     background-color: #ffffff;
     padding: 15px;
 }
+
+.project > a:hover > .project-header {
+    background-color: #ee543b;
+}
+.project > a > .project-details {
+    color: #0b2747;
+}
+.project a {
+    text-decoration: none;
+}
+
 .green {
     color: #017e5e;
 }
@@ -166,10 +165,6 @@ body {
 /*	width:50px;*/
 	top:92%;
 	right:0%;
-}
-
-.todo{
-    padding-bottom: 15px;
 }
 
 .impact .glyphicon{
