@@ -196,7 +196,9 @@ a:hover > .row-md-height > .impact {
 .text-link:hover{
     color: #0b2747;
 }
-
+.bold {
+    font-family: 'aguda_boldregular', sans-serif;
+}
 .ng-invalid.ng-dirty {
     border-color: #F07070;
 }
@@ -244,7 +246,7 @@ a:hover > .row-md-height > .impact {
         display:table-cell;
         float:none;
     }
-    .img-responsive{
+    .login-logo{
         max-width: 300px;
     }
 }
