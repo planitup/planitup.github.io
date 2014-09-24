@@ -105,7 +105,9 @@ body {
 .project a {
     text-decoration: none;
 }
-
+a:hover{
+    text-decoration: none;
+}
 .green {
     color: #017e5e;
 }
@@ -134,6 +136,11 @@ body {
 .btn-primary[disabled]{
     background-color:  #017e5e;
 }
+.discussion{
+    padding-bottom: 15px;
+}
+
+
 
 .modal-backdrop.am-fade {
   opacity: .5;
@@ -237,6 +244,9 @@ a:hover > .row-md-height > .impact {
         display:table-cell;
         float:none;
     }
+    .img-responsive{
+        max-width: 300px;
+    }
 }
 @media (min-width: 992px) {
     .container-md-height {
@@ -251,6 +261,7 @@ a:hover > .row-md-height > .impact {
         display:table-cell;
         float:none;
     }
+    
 }
 @media (min-width: 1200px) {
     .container-lg-height {
