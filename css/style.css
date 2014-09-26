@@ -174,20 +174,24 @@ a:hover{
 	right:0%;
 }
 
+.impact, .task-date{
+    background-color:#017e5e;
+}
 .impact .glyphicon{
     font-size: 20px;
 }
-.todo .todo-details{
+.task .task-details{
     background-color: #fff;
     color: #0b2747;
 }
-a:hover > .row-md-height > .impact {
+a:hover .impact, a:hover .task-date {
     background-color: #ee543b !important;
 }
-.todo .todo-details h3, .todo todo-details h3>small {
+
+.task .task-details h3, .task task-details h3>small {
     color: #0b2747;
 }
-.todo a {
+.task a {
     text-decoration: none;
 }
 .well{
@@ -199,12 +203,37 @@ a:hover > .row-md-height > .impact {
 .bold {
     font-family: 'aguda_boldregular', sans-serif;
 }
+.pagination>li>a{
+    color: #0b2747;
+    background-color: #fff;
+    border-color: #aaa;
+}
+.pagination>.active>a{
+    color: #fff;
+    background-color: #017e5e;
+   border-color: #017e5e;
+}
+.pagination>.disabled>a{
+    background-color: #fff;
+    border-color: #aaa;
+/*    opacity: .65;*/
+    color: #aaa;
+}
+.pagination>li>a:hover, .pagination>.active>a:hover{
+    background-color: #ee543b;
+    color: #fff;
+    border-color: #ee543b;
+}
+
+
 .ng-invalid.ng-dirty {
     border-color: #F07070;
 }
 .ng-valid.ng-dirty {
     border-color: #0b2747;
 }
+
+
 .collapse.am-collapse {
   animation-duration: .3s;
   animation-timing-function: ease;
@@ -219,8 +248,11 @@ a:hover > .row-md-height > .impact {
   }
 }
 
-/*Same Height Columns*/
-/* columns of same height styles */
+/*************************
+
+Same Height Columns
+
+**************************/
 .container-xs-height {
     display:table;
     padding-left:0px;
@@ -282,14 +314,23 @@ a:hover > .row-md-height > .impact {
 
 
 @media(min-width:720px){
-
 .checkbox-col {
     width: 4%;
 }
 }
 
+@media (max-width: 768px) {
+    .task-date{
+        background-color: #0b2747;
+    }
+}
 
 
+/****************************
+
+Button and hover animations
+
+*****************************/
 .btn-primary {
 	cursor: pointer;
 	text-align: center;
@@ -303,21 +344,16 @@ a:hover > .row-md-height > .impact {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-/*	border-radius: 50%;*/
 	content: '';
 	-webkit-box-sizing: content-box; 
 	-moz-box-sizing: content-box; 
 	box-sizing: content-box;
 }
-
-
-/* Effect 1 */
-.btn-primary, .project-header, .navbar-nav >li>a, a > .row-md-height > .impact {
+.btn-primary, .project-header, .navbar-nav >li>a, a > .row-md-height > .impact, a > .row-md-height > .task-date {
 	-webkit-transition: background 0.2s, color 0.2s;
 	-moz-transition: background 0.2s, color 0.2s;
 	transition: background 0.2s, color 0.2s;
 }
-
 .btn-primary:after {
 	top: -3px;
 	left: -3px;
@@ -332,10 +368,6 @@ a:hover > .row-md-height > .impact {
 	transform: scale(.8);
 	opacity: 0;
 }
-
-/* Effect 1a */
-
-
 .btn-primary:hover:after {
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
