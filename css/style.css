@@ -287,3 +287,59 @@ a:hover > .row-md-height > .impact {
     width: 4%;
 }
 }
+
+
+
+.btn-primary {
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #fff;
+}
+
+.btn-primary:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+/*	border-radius: 50%;*/
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+
+
+/* Effect 1 */
+.btn-primary, .project-header, .navbar-nav >li>a, a > .row-md-height > .impact {
+	-webkit-transition: background 0.2s, color 0.2s;
+	-moz-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary:after {
+	top: -3px;
+	left: -3px;
+	padding: 3px;
+	box-shadow: 0 0 0 4px #ee543b;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-webkit-transform: scale(.8);
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	-moz-transform: scale(.8);
+	-ms-transform: scale(.8);
+	transition: transform 0.3s, opacity 0.3s;
+	transform: scale(.8);
+	opacity: 0;
+}
+
+/* Effect 1a */
+
+
+.btn-primary:hover:after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
