@@ -349,7 +349,7 @@ Button and hover animations
 	-moz-box-sizing: content-box; 
 	box-sizing: content-box;
 }
-.btn-primary, .project-header, .navbar-nav >li>a, a > .row-md-height > .impact, a > .row-md-height > .task-date {
+.btn-primary, .project-header, .navbar-nav >li>a, .impact, .task-date {
 	-webkit-transition: background 0.2s, color 0.2s;
 	-moz-transition: background 0.2s, color 0.2s;
 	transition: background 0.2s, color 0.2s;
