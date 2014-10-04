@@ -2,7 +2,9 @@
 	var container = document.querySelector( 'div.main-container' ),
 		triggerBttn = document.getElementById( 'trigger-overlay' ),
 		overlay = document.querySelector( 'div.overlay' ),
-		closeBttn = overlay.querySelector( 'button.overlay-close' );
+        navbar = document.querySelector( 'div.navbar' ),
+		closeBttn = overlay.querySelector( 'button.overlay-close' ),
+        chatButton = document.querySelector( 'div.chat-box' );
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
@@ -18,6 +20,8 @@
 			classie.remove( overlay, 'open' );
 			classie.remove( container, 'overlay-open' );
 			classie.add( overlay, 'close' );
+            classie.remove( navbar, 'hide-element' );
+            classie.remove( chatButton, 'hide-element');
 			var onEndTransitionFn = function( ev ) {
 				if( support.transitions ) {
 					if( ev.propertyName !== 'visibility' ) return;
@@ -35,6 +39,8 @@
 		else if( !classie.has( overlay, 'close' ) ) {
 			classie.add( overlay, 'open' );
 			classie.add( container, 'overlay-open' );
+            classie.add( navbar, 'hide-element' );
+            classie.add( chatButton, 'hide-element' );
 		}
 	}
 
