@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="//rawgithub.com/mgcrea/bootstrap-additions/master/dist/bootstrap-additions.min.css">
     <link rel="stylesheet" href="css/style8.css">
     <link rel="stylesheet" href="css/angular-motion.css">
-
+    <link rel="stylesheet" href="css/simple-form.css">
     <script src="http://code.angularjs.org/1.2.24/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-animate.js"></script>
@@ -143,8 +143,9 @@
 
             </div>
             <div class="row">
-
-                <h2>Projects</h2>
+<div class="col-md-12">
+                    <div class="well">
+                <h2 class="blue aguda-bold">Projects</h2>
                 <br>
                 <!--<div class="col-xs-2"><button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-plus"></span> Add Project</button></div>-->
 
@@ -157,7 +158,7 @@
                                 <h3>Project 1</h3>
                             </div>
                             <div class="project-details">
-                                <span>Bacon ipsum dolor sit amet drumstick jerky pastrami filet mignon shank meatloaf leberkas brisket. Shank pork loin porchetta pork belly capicola jowl ball tip tail. Ground round jerky pork loin pork chop doner, tri-tip brisket.</span>
+                                <span>Bacon ipsum dolor sit amet qui nostrud short loin, eu quis pork belly drumstick minim rump et tempor magna ea. T-bone ad aliquip laboris rump kevin hamburger.</span>
                             </div>
                         </a>
                     </div>
@@ -170,7 +171,7 @@
                                 <h3>Project 2</h3>
                             </div>
                             <div class="project-details">
-                                <span>Swine drumstick kielbasa ham hock flank. Leberkas jowl ham flank prosciutto kevin. Andouille beef ribs meatball chuck tenderloin landjaeger porchetta ham doner shoulder strip steak short ribs hamburger. Ham leberkas shank sirloin pastrami bresaola.</span>
+                                <span>In leberkas nostrud cupidatat adipisicing quis doner kevin ut prosciutto mollit. Officia meatball landjaeger pork chop hamburger incididunt strip steak.</span>
                             </div>
                         </a>
                     </div>
@@ -183,13 +184,14 @@
                                 <h3>Project 3</h3>
                             </div>
                             <div class="project-details">
-                                <span>Shank pork loin porchetta pork belly capicola jowl ball tip tail. Ground round jerky pork loin pork chop doner, tri-tip brisket.</span>
+                                <span>Dolor adipisicing cillum ham hock ad landjaeger in spare ribs shankle occaecat capicola short ribs. Andouille pancetta prosciutto pork chop, sint bresaola excepteur ut ea elit shankle. Tail in aliquip aute sunt jowl shank pork chop.</span>
                             </div>
                         </a>
                     </div>
-                </div>
-            </div>
+                </div><div class="clearfix"></div>
+            </div></div></div>
             <div class="row">
+                <div class="col-md-12">
                 <div class="well">
                 <h2 class="blue">Your Tasks</h2>
 
@@ -250,7 +252,7 @@
                 </div>
                 <br>
                 <a class="btn btn-primary btn-lg center-block" href="all_user_tasks.html"><span class="glyphicon glyphicon-chevron-down"></span> See All Tasks</a>
-            </div>
+            </div></div>
 </div>
 
         </div>
@@ -282,7 +284,7 @@
 							</li>
 							<li>
 								<span><label for="q2">When is the due date?</label></span>
-								<input id="q2" name="q2" type="text"/>
+                                <input id="q2" name="q2" type="text"/>
 							</li>
 							<li>
 								<span><label for="q3">Who else is working on it?</label></span>
@@ -290,7 +292,7 @@
 							</li>
 							<li>
 								<span><label for="q4">Describe the project.</label></span>
-								<input id="q4" name="q4" type="text"/>
+                                <textarea class="" id="q4" name="q4"></textarea>
 							</li>
 							<!--<li>
 								<span><label for="q5">What book inspires you?</label></span>
@@ -352,6 +354,11 @@
 				}
 			} );
 		</script>
+    
+    <script>
+        var simpleForm = document.getElementById
+    
+    </script>
     
 
     <!-- Latest compiled and minified JavaScript -->

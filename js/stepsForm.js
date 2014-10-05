@@ -76,9 +76,15 @@
 	};
 
 	stepsForm.prototype._initEvents = function() {
-		var self = this,
+        if(this.questions[ this.current ].querySelector( 'input' )!=null){
+        var firstInput = this.questions[ this.current ].querySelector( 'input' )
+        }
+        else{
+        var firstInput = this.questions[ this.current ].querySelector( 'textarea' )
+        }
+        var self = this,
 			// first input
-			firstElInput = this.questions[ this.current ].querySelector( 'input' ),
+			firstElInput = firstInput,
 			// focus
 			onFocusStartFn = function() {
 				firstElInput.removeEventListener( 'focus', onFocusStartFn );
@@ -137,6 +143,7 @@
 		this._progress();
 
 		if( !this.isFilled ) {
+            console.log('got here');
 			// change the current question number/status
 			this._updateQuestionNumber();
 
@@ -148,7 +155,12 @@
 			var nextQuestion = this.questions[ this.current ];
 			classie.removeClass( currentQuestion, 'current' );
 			classie.addClass( nextQuestion, 'current' );
+            stepsForm.checkType(nextQuestion);
+            console.log(currentQuestion);
 		}
+        else{
+            console.log("not filled");   
+        }
 
 		// after animation ends, remove class "show-next" from form element and change current question placeholder
 		var self = this,
@@ -164,7 +176,12 @@
 					self.currentNum.innerHTML = self.nextQuestionNum.innerHTML;
 					self.questionStatus.removeChild( self.nextQuestionNum );
 					// force the focus on the next input
+                    if(nextQuestion.querySelector( 'input' ) != null){
 					nextQuestion.querySelector( 'input' ).focus();
+                    }
+                    else{
+                        nextQuestion.querySelector( 'textarea' ).focus();
+                    }
 				}
 			};
 
@@ -200,7 +217,12 @@
 	// the validation function
 	stepsForm.prototype._validade = function() {
 		// current question´s input
+        if(this.questions[ this.current ].querySelector( 'input' )!=null){
 		var input = this.questions[ this.current ].querySelector( 'input' ).value;
+        }
+        else{
+        var input = this.questions[ this.current ].querySelector( 'textarea' ).value;
+        }
 		if( input === '' ) {
 			this._showError( 'EMPTYSTR' );
 			return false;
@@ -229,6 +251,19 @@
 	stepsForm.prototype._clearError = function() {
 		classie.removeClass( this.error, 'show' );
 	}
+    
+    stepsForm.checkType = function(question){
+        var simpleform = document.querySelector( 'form.simform' );
+        console.log(simpleform);
+        if(question.querySelector( 'input' )!=null){
+            console.log("input");
+        }
+        else{
+            classie.addClass(simpleform, "simform-area" );
+            console.log("textarea");
+        }
+        
+    }
 
 	// add to global namespace
 	window.stepsForm = stepsForm;
