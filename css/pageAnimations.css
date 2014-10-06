@@ -1,0 +1,130 @@
+.page.ng-enter,
+.page.ng-leave {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+        transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+}
+.rtl .page.ng-enter {
+    z-index: 8888;
+    -webkit-animation: scaleUp 0.5s both ease-in;
+    -moz-animation: scaleUp 0.5s both ease-in;
+    animation: scaleUp 0.5s both ease-in;
+}
+.rtl .page.ng-enter.ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.rtl .page.ng-leave.ng-leave-active {
+    z-index: 9999;
+    -webkit-animation: slideOutLeft 0.5s both ease-in;
+    -moz-animation: slideOutLeft 0.5s both ease-in;
+    animation: slideOutLeft 0.5s both ease-in;
+}
+.ltr .page.ng-enter {
+    z-index: 9999;
+    -webkit-animation: slideInLeft 0.5s both ease-in;
+    -moz-animation: slideInLeft 0.5s both ease-in;
+    animation: slideInLeft 0.5s both ease-in;
+}
+.ltr .page.ng-enter.ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.ltr .page.ng-leave.ng-leave-active {
+    z-index: 8888;
+    -webkit-animation: scaleDown 0.5s both ease-in;
+    -moz-animation: scaleDown 0.5s both ease-in;
+    animation: scaleDown 0.5s both ease-in;
+}
+/* scale up */
+
+@keyframes scaleUp {
+    from {
+        /*        z-index: 5555;*/
+        opacity: 0;
+        -webkit-transform: scale(0.8);
+    }
+}
+@-moz-keyframes scaleUp {
+    from {
+        /*        z-index: 5555;*/
+        opacity: 0;
+        -moz-transform: scale(0.8);
+    }
+}
+@-webkit-keyframes scaleUp {
+    from {
+        /*        z-index: 5555;*/
+        opacity: 0;
+        -webkit-transform: scale(0.8);
+    }
+}
+/* scale down */
+
+@keyframes scaleDown {
+    to {
+        opacity: 0.3;
+        -webkit-transform: scale(0.8);
+    }
+}
+@-moz-keyframes scaleDown {
+    to {
+        opacity: 0.3;
+        -moz-transform: scale(0.8);
+    }
+}
+@-webkit-keyframes scaleDown {
+    to {
+        opacity: 0.3;
+        -webkit-transform: scale(0.8);
+    }
+}
+/* slide out left */
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-100%);
+    }
+}
+@-moz-keyframes slideOutLeft {
+    to {
+        -moz-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes slideOutLeft {
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}
+/* slide in left */
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+}
+@-moz-keyframes slideInLeft {
+    from {
+        -moz-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes slideInLeft {
+    from {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+/* slide in left */
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+}
+@-moz-keyframes slideInRight {
+    from {
+        -moz-transform: translateX(100%);
+    }
+}
+@-webkit-keyframes slideInRight {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+}

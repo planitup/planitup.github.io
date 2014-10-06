@@ -1,5 +1,5 @@
 {
-    Member: {
+    User: {
         id: "",
         firstName: "",
         lastName: "",
@@ -24,7 +24,7 @@
         project_id: "",
         due_date: "",
         rating: "",
-        member_id: [   
+        user_id: [   
         ],
         status: ""
     },
@@ -44,7 +44,7 @@
         task_id: "",
         content: [
             {
-                member_id: "",
+                user_id: "",
                 content: "",
                 date_time: ""
             }
