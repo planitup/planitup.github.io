@@ -74,6 +74,7 @@
 .main-container.overlay-open {
 	-webkit-transform: scale(0.8);
 	transform: scale(0.8);
+    opacity: .5;
 }
 
 .overlay-contentscale {
